@@ -9,6 +9,8 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 
+#import "NetworkManager.h"
+
 @interface MasterViewController ()
 
 @end
@@ -26,6 +28,12 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    [[NetworkManager sharedNetworkManager] getBlogPostSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        // TODO: Parse object and reload data
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        // TODO: Error handling
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

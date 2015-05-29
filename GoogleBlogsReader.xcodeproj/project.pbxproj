@@ -15,7 +15,8 @@
 		3A88FF441B183A07008D73C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A88FF421B183A07008D73C1 /* Main.storyboard */; };
 		3A88FF461B183A07008D73C1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A88FF451B183A07008D73C1 /* Images.xcassets */; };
 		3A88FF491B183A07008D73C1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A88FF471B183A07008D73C1 /* LaunchScreen.xib */; };
-		3A88FF551B183A07008D73C1 /* GoogleBlogsReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A88FF541B183A07008D73C1 /* GoogleBlogsReaderTests.m */; };
+		3A88FF601B183DBD008D73C1 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A88FF5F1B183DBD008D73C1 /* NetworkManager.m */; };
+		3A88FF621B1841F1008D73C1 /* NetworkManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A88FF611B1841F1008D73C1 /* NetworkManagerTests.m */; };
 		93EFAAE079029457CD4C4551 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DEAA182C494A302303CD81 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +47,9 @@
 		3A88FF481B183A07008D73C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3A88FF4E1B183A07008D73C1 /* GoogleBlogsReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleBlogsReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A88FF531B183A07008D73C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A88FF541B183A07008D73C1 /* GoogleBlogsReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleBlogsReaderTests.m; sourceTree = "<group>"; };
+		3A88FF5E1B183DBD008D73C1 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		3A88FF5F1B183DBD008D73C1 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		3A88FF611B1841F1008D73C1 /* NetworkManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManagerTests.m; sourceTree = "<group>"; };
 		A9DEAA182C494A302303CD81 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35AEF1E44E0F295B0116C85 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,6 +98,8 @@
 			children = (
 				3A88FF361B183A07008D73C1 /* AppDelegate.h */,
 				3A88FF371B183A07008D73C1 /* AppDelegate.m */,
+				3A88FF5E1B183DBD008D73C1 /* NetworkManager.h */,
+				3A88FF5F1B183DBD008D73C1 /* NetworkManager.m */,
 				3A88FF3C1B183A07008D73C1 /* MasterViewController.h */,
 				3A88FF3D1B183A07008D73C1 /* MasterViewController.m */,
 				3A88FF3F1B183A07008D73C1 /* DetailViewController.h */,
@@ -120,7 +125,7 @@
 		3A88FF511B183A07008D73C1 /* GoogleBlogsReaderTests */ = {
 			isa = PBXGroup;
 			children = (
-				3A88FF541B183A07008D73C1 /* GoogleBlogsReaderTests.m */,
+				3A88FF611B1841F1008D73C1 /* NetworkManagerTests.m */,
 				3A88FF521B183A07008D73C1 /* Supporting Files */,
 			);
 			path = GoogleBlogsReaderTests;
@@ -290,6 +295,7 @@
 				3A88FF3E1B183A07008D73C1 /* MasterViewController.m in Sources */,
 				3A88FF381B183A07008D73C1 /* AppDelegate.m in Sources */,
 				3A88FF351B183A07008D73C1 /* main.m in Sources */,
+				3A88FF601B183DBD008D73C1 /* NetworkManager.m in Sources */,
 				3A88FF3B1B183A07008D73C1 /* GoogleBlogsReader.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,7 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A88FF551B183A07008D73C1 /* GoogleBlogsReaderTests.m in Sources */,
+				3A88FF621B1841F1008D73C1 /* NetworkManagerTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +442,7 @@
 		};
 		3A88FF5C1B183A07008D73C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D35AEF1E44E0F295B0116C85 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -455,6 +462,7 @@
 		};
 		3A88FF5D1B183A07008D73C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D89EA02C9DB2E7F5AA7D0B6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
