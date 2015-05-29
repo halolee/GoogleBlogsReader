@@ -16,6 +16,7 @@
 		3A88FF461B183A07008D73C1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A88FF451B183A07008D73C1 /* Images.xcassets */; };
 		3A88FF491B183A07008D73C1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A88FF471B183A07008D73C1 /* LaunchScreen.xib */; };
 		3A88FF551B183A07008D73C1 /* GoogleBlogsReaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A88FF541B183A07008D73C1 /* GoogleBlogsReaderTests.m */; };
+		93EFAAE079029457CD4C4551 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DEAA182C494A302303CD81 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D89EA02C9DB2E7F5AA7D0B6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3A88FF2F1B183A07008D73C1 /* GoogleBlogsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleBlogsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A88FF331B183A07008D73C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A88FF341B183A07008D73C1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,6 +47,8 @@
 		3A88FF4E1B183A07008D73C1 /* GoogleBlogsReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoogleBlogsReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A88FF531B183A07008D73C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A88FF541B183A07008D73C1 /* GoogleBlogsReaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GoogleBlogsReaderTests.m; sourceTree = "<group>"; };
+		A9DEAA182C494A302303CD81 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D35AEF1E44E0F295B0116C85 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93EFAAE079029457CD4C4551 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +76,8 @@
 				3A88FF311B183A07008D73C1 /* GoogleBlogsReader */,
 				3A88FF511B183A07008D73C1 /* GoogleBlogsReaderTests */,
 				3A88FF301B183A07008D73C1 /* Products */,
+				4FEB906AA41ED60DE14A9995 /* Pods */,
+				F2961C25B4BFCBCFCB4615E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +134,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4FEB906AA41ED60DE14A9995 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D35AEF1E44E0F295B0116C85 /* Pods.debug.xcconfig */,
+				0D89EA02C9DB2E7F5AA7D0B6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F2961C25B4BFCBCFCB4615E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9DEAA182C494A302303CD81 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +158,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A88FF581B183A07008D73C1 /* Build configuration list for PBXNativeTarget "GoogleBlogsReader" */;
 			buildPhases = (
+				EA883280B2FE4C70DE0E086B /* Check Pods Manifest.lock */,
 				3A88FF2B1B183A07008D73C1 /* Sources */,
 				3A88FF2C1B183A07008D73C1 /* Frameworks */,
 				3A88FF2D1B183A07008D73C1 /* Resources */,
+				0B94EE0B9A6B463742B7EE44 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -221,6 +247,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0B94EE0B9A6B463742B7EE44 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA883280B2FE4C70DE0E086B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3A88FF2B1B183A07008D73C1 /* Sources */ = {
@@ -355,6 +414,7 @@
 		};
 		3A88FF591B183A07008D73C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D35AEF1E44E0F295B0116C85 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GoogleBlogsReader/Info.plist;
@@ -365,6 +425,7 @@
 		};
 		3A88FF5A1B183A07008D73C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D89EA02C9DB2E7F5AA7D0B6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GoogleBlogsReader/Info.plist;
@@ -426,6 +487,7 @@
 				3A88FF5A1B183A07008D73C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3A88FF5B1B183A07008D73C1 /* Build configuration list for PBXNativeTarget "GoogleBlogsReaderTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +496,7 @@
 				3A88FF5D1B183A07008D73C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
