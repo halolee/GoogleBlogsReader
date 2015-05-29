@@ -35,9 +35,31 @@
     NSString *requestURL = [BASE_URL stringByAppendingFormat:@"feed/find?v=1.0&q=%@",dummySearchString];
     
     [self.manager GET:requestURL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSLog(@"response %@",responseObject);
+//        NSLog(@"response %@",responseObject);
         success(operation,responseObject);
     } failure:failure];
+}
+
+- (NSArray *) getEntitiesListFromResponse:(id)response{
+    NSError *error;
+    FindResponse *findResponse = [MTLJSONAdapter modelOfClass:FindResponse.class fromJSONDictionary:response error:&error];
+    if (error != nil) {
+        NSLog(@"FindResponse Parsing Error: %@",error);
+        return nil;
+    }
+    QueryResponse *queryResponse = [MTLJSONAdapter modelOfClass:QueryResponse.class fromJSONDictionary:findResponse.responseData error:&error];
+    if (error != nil) {
+        NSLog(@"QueryResponse Parsing Error: %@",error);
+        return nil;
+    }
+    
+    NSArray *entries = [MTLJSONAdapter modelsOfClass:Entry.class fromJSONArray:queryResponse.entries error:&error];
+    if (error != nil) {
+        NSLog(@"Entries Parsing Error: %@",error);
+        return nil;
+    }
+    
+    return entries;
 }
 
 @end

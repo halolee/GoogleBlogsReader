@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FindResponse.h"
 
 @class AFHTTPRequestOperation;
 
@@ -16,4 +17,6 @@
 
 - (void) getBlogPostSuccess:(void (^)(AFHTTPRequestOperation *operation, id responseObject))success
                     failure:(void (^)(AFHTTPRequestOperation *operation, NSError *error))failure;
+
+- (NSArray *) getEntitiesListFromResponse:(id)response;
 @end

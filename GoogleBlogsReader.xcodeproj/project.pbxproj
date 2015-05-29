@@ -17,6 +17,9 @@
 		3A88FF491B183A07008D73C1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A88FF471B183A07008D73C1 /* LaunchScreen.xib */; };
 		3A88FF601B183DBD008D73C1 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A88FF5F1B183DBD008D73C1 /* NetworkManager.m */; };
 		3A88FF621B1841F1008D73C1 /* NetworkManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A88FF611B1841F1008D73C1 /* NetworkManagerTests.m */; };
+		3A88FF681B185EC6008D73C1 /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A88FF671B185EC6008D73C1 /* Entry.m */; };
+		3A88FF6B1B185F15008D73C1 /* QueryResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A88FF6A1B185F15008D73C1 /* QueryResponse.m */; };
+		3A88FF6E1B185F29008D73C1 /* FindResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A88FF6D1B185F29008D73C1 /* FindResponse.m */; };
 		93EFAAE079029457CD4C4551 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9DEAA182C494A302303CD81 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +53,12 @@
 		3A88FF5E1B183DBD008D73C1 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		3A88FF5F1B183DBD008D73C1 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
 		3A88FF611B1841F1008D73C1 /* NetworkManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManagerTests.m; sourceTree = "<group>"; };
+		3A88FF661B185EC6008D73C1 /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
+		3A88FF671B185EC6008D73C1 /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		3A88FF691B185F15008D73C1 /* QueryResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryResponse.h; sourceTree = "<group>"; };
+		3A88FF6A1B185F15008D73C1 /* QueryResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryResponse.m; sourceTree = "<group>"; };
+		3A88FF6C1B185F29008D73C1 /* FindResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindResponse.h; sourceTree = "<group>"; };
+		3A88FF6D1B185F29008D73C1 /* FindResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindResponse.m; sourceTree = "<group>"; };
 		A9DEAA182C494A302303CD81 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35AEF1E44E0F295B0116C85 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,10 +105,9 @@
 		3A88FF311B183A07008D73C1 /* GoogleBlogsReader */ = {
 			isa = PBXGroup;
 			children = (
+				3A88FF6F1B187250008D73C1 /* NetworkLayer */,
 				3A88FF361B183A07008D73C1 /* AppDelegate.h */,
 				3A88FF371B183A07008D73C1 /* AppDelegate.m */,
-				3A88FF5E1B183DBD008D73C1 /* NetworkManager.h */,
-				3A88FF5F1B183DBD008D73C1 /* NetworkManager.m */,
 				3A88FF3C1B183A07008D73C1 /* MasterViewController.h */,
 				3A88FF3D1B183A07008D73C1 /* MasterViewController.m */,
 				3A88FF3F1B183A07008D73C1 /* DetailViewController.h */,
@@ -137,6 +145,29 @@
 				3A88FF531B183A07008D73C1 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3A88FF6F1B187250008D73C1 /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				3A88FF5E1B183DBD008D73C1 /* NetworkManager.h */,
+				3A88FF5F1B183DBD008D73C1 /* NetworkManager.m */,
+				3A88FF701B187271008D73C1 /* Models */,
+			);
+			name = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		3A88FF701B187271008D73C1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3A88FF661B185EC6008D73C1 /* Entry.h */,
+				3A88FF671B185EC6008D73C1 /* Entry.m */,
+				3A88FF691B185F15008D73C1 /* QueryResponse.h */,
+				3A88FF6A1B185F15008D73C1 /* QueryResponse.m */,
+				3A88FF6C1B185F29008D73C1 /* FindResponse.h */,
+				3A88FF6D1B185F29008D73C1 /* FindResponse.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		4FEB906AA41ED60DE14A9995 /* Pods */ = {
@@ -294,8 +325,11 @@
 				3A88FF411B183A07008D73C1 /* DetailViewController.m in Sources */,
 				3A88FF3E1B183A07008D73C1 /* MasterViewController.m in Sources */,
 				3A88FF381B183A07008D73C1 /* AppDelegate.m in Sources */,
+				3A88FF6E1B185F29008D73C1 /* FindResponse.m in Sources */,
 				3A88FF351B183A07008D73C1 /* main.m in Sources */,
+				3A88FF681B185EC6008D73C1 /* Entry.m in Sources */,
 				3A88FF601B183DBD008D73C1 /* NetworkManager.m in Sources */,
+				3A88FF6B1B185F15008D73C1 /* QueryResponse.m in Sources */,
 				3A88FF3B1B183A07008D73C1 /* GoogleBlogsReader.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

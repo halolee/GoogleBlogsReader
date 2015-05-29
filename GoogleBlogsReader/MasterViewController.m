@@ -31,6 +31,7 @@
     
     [[NetworkManager sharedNetworkManager] getBlogPostSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         // TODO: Parse object and reload data
+        [[NetworkManager sharedNetworkManager] getEntitiesListFromResponse:responseObject];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         // TODO: Error handling
     }];

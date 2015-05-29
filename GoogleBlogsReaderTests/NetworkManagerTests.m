@@ -74,6 +74,14 @@
     
     [[NetworkManager sharedNetworkManager] getBlogPostSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
         XCTAssertTrue(responseObject);
+        NSArray *array = [[NetworkManager sharedNetworkManager] getEntitiesListFromResponse:responseObject];
+        for (id object in array) {
+            if (![object isKindOfClass:[Entry class]]) {
+                XCTAssertFalse(@"Wrong class type, expecting [Entry class]");
+            }
+        }
+        XCTAssertTrue(@"Network response as expected.");
+        
         [expectation fulfill];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         XCTAssertFalse(error);
@@ -81,7 +89,7 @@
     
     [self waitForExpectationsWithTimeout:5.0 handler:^(NSError *error) {
         if (error) {
-            NSLog(@"Timeout Error: %@", error);
+            NSLog(@"Network response time out Error: %@", error);
         }
     }];
 }
